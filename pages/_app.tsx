@@ -1,6 +1,7 @@
-import '~/src/styles/reset.css'
+// import '~/src/styles/reset.css'
 import '~/src/styles/colors.css'
 import 'highlight.js/styles/hybrid.css'
+import '~/src/styles/styles.scss'
 
 import { AppProps } from 'next/app'
 import Script from 'next/script'

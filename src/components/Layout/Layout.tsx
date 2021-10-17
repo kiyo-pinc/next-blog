@@ -37,7 +37,7 @@ const Component: React.FC<Props> = ({ banner, categories, children, popularArtic
       <meta name="twitter:card" content="summary_large_image" />
     </Head>
     <Header />
-    <main className={styles.divider}>
+    <main className="container">
       <div className={styles.container}>{children}</div>
       <aside className={styles.aside}>
         <Banner id="list" banner={banner} />

@@ -13,5 +13,6 @@ module.exports = withPlugins([[withBundleAnalyzer]], {
   images: {
     loader: 'imgix',
     path: '',
+    domains: ['images.microcms-assets.io'],
   },
 })

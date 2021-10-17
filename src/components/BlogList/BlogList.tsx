@@ -7,7 +7,7 @@ import { Category } from '~/src/types/microCMS/api/Category'
 
 import { Meta } from '../Meta'
 
-import styles from './BlogList.module.css'
+import styles from './BlogList.module.scss'
 
 type ContainerProps =
   | {
@@ -29,20 +29,22 @@ type Props = ContainerProps
 
 const Component: React.VFC<Props> = ({ contents, currentPage, pager, selectedCategory }) => (
   <>
-    <ul>
+    <ul className="row">
       {contents.map((content) => (
-        <li key={content.id} className={styles.list}>
+        <li key={content.id} className={'mb-18 col-12 col-sm-6 col-md-4 ' + styles.lsn}>
           <Link href={pagesPath._slug(content.id).$url()}>
-            <a className={styles.link}>
-              <picture>
-                <source type="image/webp" data-srcset={content.ogimage.url + '?w=670&fm=webp'} />
-                <img
-                  data-src={content.ogimage.url + '?w=670'}
-                  className={'lazyload ' + styles.ogimage}
-                  alt="アイキャッチ画像"
-                />
-              </picture>
-              <dl className={styles.content}>
+            <a className={'d-block card ' + styles.tdn}>
+              {/* <picture> */}
+                {/* <source type="image/webp" data-srcset={content.ogimage.url + '?w=670&fm=webp'} /> */}
+                <div className={styles.imgFrame}>
+                  <img
+                    src={content.ogimage.url + '?w=670'}
+                    className={'lazyload w-100 h-auto d-block '}
+                    alt="アイキャッチ画像"
+                  />
+                </div>
+              {/* </picture> */}
+              <dl className={'p-3 ' + styles.content}>
                 <dt className={styles.title}>{content.title}</dt>
                 <dd>
                   <Meta

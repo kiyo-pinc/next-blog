@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useEffect, useState } from 'react'
+import Link from 'next/link'
 
 import { headerId } from '~/src/utils/ids'
 
@@ -36,9 +37,11 @@ const Component: React.VFC<Props> = ({ params, isOpen, toggleOpen, setIsOpen }) 
   <>
     <header id={headerId} className={styles.header}>
       <h1 className={styles.logo}>
-        <a href="">
-          <img className={styles.logoImg} src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/logo.svg`} alt="microCMS" />
-        </a>
+        <Link href="/">
+          <a>
+            <img className={styles.logoImg} src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/logo.svg`} alt="microCMS" />
+          </a>
+        </Link>
       </h1>
       <button className={styles.menuBtn} onClick={toggleOpen}>
         <img src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/icon_menu.svg`} alt="menu" />
@@ -48,7 +51,9 @@ const Component: React.VFC<Props> = ({ params, isOpen, toggleOpen, setIsOpen }) 
         <ul className={styles.lists}>
           {LinkList.map((link) => (
             <li key={link.text} className={styles.list}>
-              <a href={link.href}>{link.text}</a>
+              <Link href={link.href}>
+                <a>{link.text}</a>
+              </Link>
             </li>
           ))}
         </ul>

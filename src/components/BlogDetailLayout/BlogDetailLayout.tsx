@@ -11,7 +11,7 @@ import { Meta } from '../Meta'
 import { Partner } from '../Partner'
 import { Post } from '../Post'
 import { RelatedBlogs } from '../RelatedBlogs'
-import { Share } from '../Share'
+// import { Share } from '../Share'
 import { Toc } from '../Toc'
 import { TocProps } from '../Toc/Toc'
 import { Writer } from '../Writer'
@@ -60,7 +60,7 @@ const Component: React.VFC<Props> = ({ content, toc, ...layoutProps }) => (
     </div>
     <Breadcrumb category={content.category} />
     <div className={styles.main}>
-      <Share id={content.id} title={content.title} />
+      {/* <Share id={content.id} title={content.title} /> */}
       <div className={styles.container}>
         <h1 className={styles.title}>{content.title}</h1>
         <Meta

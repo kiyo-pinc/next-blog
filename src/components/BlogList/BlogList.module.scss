@@ -1,0 +1,26 @@
+.lsn {
+  list-style: none;
+}
+.tdn {
+  text-decoration: none;
+}
+.imgFrame {
+  position: relative;
+  overflow: hidden;
+  padding-top: 50%;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: none;
+  }
+}
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
