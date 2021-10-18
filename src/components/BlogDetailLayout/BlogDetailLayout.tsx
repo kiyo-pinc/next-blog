@@ -16,7 +16,7 @@ import { Toc } from '../Toc'
 import { TocProps } from '../Toc/Toc'
 import { Writer } from '../Writer'
 
-import styles from './BlogDetailLayout.module.css'
+import styles from './BlogDetailLayout.module.scss'
 
 type ContainerProps = {
   banner: Banner

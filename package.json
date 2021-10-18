@@ -37,6 +37,7 @@
     "react-scroll": "1.8.3",
     "react-use": "17.2.4",
     "rss": "1.2.2",
+    "sass": "^1.43.2",
     "swr": "0.5.6"
   },
   "devDependencies": {

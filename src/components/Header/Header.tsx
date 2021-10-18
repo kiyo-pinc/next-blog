@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 import { headerId } from '~/src/utils/ids'
 
-import styles from './Header.module.css'
+import styles from './Header.module.scss'
 
 type Props = {
   params: string
@@ -35,28 +35,37 @@ const LinkList = [
 
 const Component: React.VFC<Props> = ({ params, isOpen, toggleOpen, setIsOpen }) => (
   <>
-    <header id={headerId} className={styles.header}>
-      <h1 className={styles.logo}>
-        <Link href="/">
-          <a>
-            <img className={styles.logoImg} src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/logo.svg`} alt="microCMS" />
-          </a>
-        </Link>
-      </h1>
-      <button className={styles.menuBtn} onClick={toggleOpen}>
-        <img src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/icon_menu.svg`} alt="menu" />
-      </button>
-      {isOpen && <div className={styles.mask} onClick={() => setIsOpen(false)}></div>}
-      <div className={styles.menu} data-is-open={isOpen}>
-        <ul className={styles.lists}>
-          {LinkList.map((link) => (
-            <li key={link.text} className={styles.list}>
-              <Link href={link.href}>
-                <a>{link.text}</a>
+    <header id={headerId} className="">
+      <div className="container">
+        <div className="row">
+          <div className="col-10 col-md-6">
+            <h1 className={styles.logo}>
+              <Link href="/">
+                <a className="text-red">
+                  キヨスケの備忘録
+                  {/* <img className={styles.logoImg} src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/logo.svg`} alt="microCMS" /> */}
+                </a>
               </Link>
-            </li>
-          ))}
-        </ul>
+            </h1>
+          </div>
+          <div className="col-2 col-md-6">
+            <button className={styles.menuBtn} onClick={toggleOpen}>
+              <img src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/icon_menu.svg`} alt="menu" />
+            </button>
+            {isOpen && <div className={styles.mask} onClick={() => setIsOpen(false)}></div>}
+            <div className={styles.menu} data-is-open={isOpen}>
+              <ul className={styles.lists}>
+                {LinkList.map((link) => (
+                  <li key={link.text} className={styles.list}>
+                    <Link href={link.href}>
+                      <a>{link.text}</a>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <div className={styles.empty}></div>

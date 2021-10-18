@@ -10,8 +10,8 @@ if (process.env.NEXT_PUBLIC_SITE_URL === undefined) {
 
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL
 
-const title = 'microCMSブログ'
-export const description = ''
+const title = 'キヨスケの備忘録'
+export const description = 'キヨスケがした技術検証をつらつらと書き残しています。Webサイトの制作もしております。'
 
 export const returnTitle = (pageTitle?: string) => {
   if (pageTitle !== undefined) {

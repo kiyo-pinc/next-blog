@@ -38,14 +38,16 @@ const Component: React.FC<Props> = ({ banner, categories, children, popularArtic
     </Head>
     <Header />
     <main className="container">
-      <div className={styles.container}>{children}</div>
-      <aside className={styles.aside}>
-        <Banner id="list" banner={banner} />
-        <Search />
-        <Categories categories={categories} />
-        <PopularArticles contents={popularArticles} />
-        {latestArticles && <Latest contents={latestArticles} />}
-      </aside>
+      <div className="row">
+        <div className={'col-12 col-md-8 '}>{children}</div>
+        <aside className={'col-12 col-md-4 '}>
+          <Banner id="list" banner={banner} />
+          <Search />
+          <Categories categories={categories} />
+          <PopularArticles contents={popularArticles} />
+          {latestArticles && <Latest contents={latestArticles} />}
+        </aside>
+      </div>
     </main>
     <Footer />
   </>
