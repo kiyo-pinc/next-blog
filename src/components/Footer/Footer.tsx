@@ -4,25 +4,25 @@ import styles from './Footer.module.css'
 
 const list = [
   {
-    href: 'https://wanta.co.jp',
-    text: '運営会社',
+    href: ' /',
+    text: 'ブログ',
   },
-  {
-    href: 'https://microcms.io/law',
-    text: '特定商取引法に基づく表記',
-  },
-  {
-    href: 'https://microcms.io/terms',
-    text: '利用規約',
-  },
-  {
-    href: 'https://microcms.io/policy',
-    text: 'プライバシーポリシー',
-  },
-  {
-    href: 'https://microcms.io/contact',
-    text: 'お問い合わせ',
-  },
+  // {
+  //   href: 'https://microcms.io/law',
+  //   text: '特定商取引法に基づく表記',
+  // },
+  // {
+  //   href: 'https://microcms.io/terms',
+  //   text: '利用規約',
+  // },
+  // {
+  //   href: 'https://microcms.io/policy',
+  //   text: 'プライバシーポリシー',
+  // },
+  // {
+  //   href: 'https://microcms.io/contact',
+  //   text: 'お問い合わせ',
+  // },
 ]
 
 const Component: React.VFC = () => (
@@ -34,7 +34,7 @@ const Component: React.VFC = () => (
         </li>
       ))}
     </ul>
-    <p className={styles.cr}>© Wanta Inc.</p>
+    <p className={styles.cr}>© Kiyosuke</p>
   </footer>
 )
 

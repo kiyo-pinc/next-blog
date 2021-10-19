@@ -11,17 +11,17 @@ import styles from './BlogList.module.scss'
 
 type ContainerProps =
   | {
-      contents: Blog[]
-      currentPage: number
-      pager: number[]
-      selectedCategory?: Category | null
-    }
+    contents: Blog[]
+    currentPage: number
+    pager: number[]
+    selectedCategory?: Category | null
+  }
   | {
-      contents: Blog[]
-      currentPage?: number | null
-      pager?: number[] | null
-      selectedCategory?: Category | null
-    }
+    contents: Blog[]
+    currentPage?: number | null
+    pager?: number[] | null
+    selectedCategory?: Category | null
+  }
 
 export type { ContainerProps as BlogListProps }
 
@@ -35,14 +35,18 @@ const Component: React.VFC<Props> = ({ contents, currentPage, pager, selectedCat
           <Link href={pagesPath._slug(content.id).$url()}>
             <a className={'d-block card ' + styles.tdn}>
               {/* <picture> */}
-                {/* <source type="image/webp" data-srcset={content.ogimage.url + '?w=670&fm=webp'} /> */}
-                <div className={styles.imgFrame}>
-                  <img
-                    src={content.ogimage.url + '?w=670'}
-                    className={'lazyload w-100 h-auto d-block '}
-                    alt="アイキャッチ画像"
-                  />
-                </div>
+              {/* <source type="image/webp" data-srcset={content.ogimage.url + '?w=670&fm=webp'} /> */}
+              <div className={styles.imgFrame}>
+                {/* <img
+                  src={content.ogimage.url + '?w=670'}
+                  className={'lazyload w-100 h-auto d-block '}
+                  alt="アイキャッチ画像"
+                /> */}
+                <picture>
+                  <source type="image/webp" srcSet={`${content.ogimage.url}?fit=crop&w=200&h=115&fm=webp`} />
+                  <img src={`${content.ogimage.url}?fit=crop&w=200&h=115&q=100`} className={styles.image} alt="" />
+                </picture>
+              </div>
               {/* </picture> */}
               <dl className={'p-3 ' + styles.content}>
                 <dt className={styles.title}>{content.title}</dt>
@@ -67,9 +71,9 @@ const Component: React.VFC<Props> = ({ contents, currentPage, pager, selectedCat
               href={
                 selectedCategory !== null && selectedCategory !== undefined
                   ? pagesPath.category
-                      ._categoryId(selectedCategory.id)
-                      .page._pageNumber(page + 1)
-                      .$url()
+                    ._categoryId(selectedCategory.id)
+                    .page._pageNumber(page + 1)
+                    .$url()
                   : pagesPath.page._pageNumber(page + 1).$url()
               }
             >

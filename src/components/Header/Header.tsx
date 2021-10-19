@@ -16,21 +16,21 @@ type Props = {
 
 const LinkList = [
   {
-    href: 'https://google.com',
+    href: '/',
     text: 'ブログ',
   },
-  {
-    href: 'https://google.com',
-    text: 'ドキュメント',
-  },
-  {
-    href: 'https://google.com',
-    text: 'ブログ',
-  },
-  {
-    href: 'https://google.com',
-    text: 'お問い合わせ',
-  },
+  // {
+  //   href: 'https://google.com',
+  //   text: 'ドキュメント',
+  // },
+  // {
+  //   href: 'https://google.com',
+  //   text: 'ブログ',
+  // },
+  // {
+  //   href: 'https://google.com',
+  //   text: 'お問い合わせ',
+  // },
 ]
 
 const Component: React.VFC<Props> = ({ params, isOpen, toggleOpen, setIsOpen }) => (
