@@ -5,7 +5,7 @@ import { Category } from '../types/microCMS/api/Category'
 import { apiClient } from './apiClient'
 import { headers } from './microCMSHeaders'
 
-export const limit = 8
+export const limit = 4
 
 export async function getContents(): Promise<{
   currentPage: number

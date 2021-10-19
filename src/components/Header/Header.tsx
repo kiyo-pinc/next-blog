@@ -35,13 +35,13 @@ const LinkList = [
 
 const Component: React.VFC<Props> = ({ params, isOpen, toggleOpen, setIsOpen }) => (
   <>
-    <header id={headerId} className="">
+    <header id={headerId} className="py-4">
       <div className="container">
         <div className="row">
           <div className="col-10 col-md-6">
             <h1 className={styles.logo}>
               <Link href="/">
-                <a className={`text-red ${params}`}>
+                <a className={`${params}`}>
                   キヨスケの備忘録
                   {/* <img className={styles.logoImg} src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/logo.svg`} alt="microCMS" /> */}
                 </a>

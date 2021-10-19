@@ -55,7 +55,7 @@ const Component: React.VFC<Props> = ({ content, toc, ...layoutProps }) => (
           type="image/webp"
           srcSet={`${content.ogimage.url}?w=375&fm=webp, ${content.ogimage.url}?w=750&fm=webp 2x`}
         />
-        <img src={content.ogimage.url + '?w=820&q=100'} className={styles.ogimage} alt="" />
+        <img src={content.ogimage.url + '?w=820&q=100'} className={'w-100 ' + styles.ogimage} alt="" />
       </picture>
     </div>
     <Breadcrumb category={content.category} />

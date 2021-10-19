@@ -4,7 +4,7 @@ import React from 'react'
 import { MicroCMSCommonValue } from '~/src/types/microCMS/Common'
 import { Category } from '~/src/types/microCMS/api/Category'
 
-import styles from './Meta.module.css'
+import styles from './Meta.module.scss'
 
 type ContainerProps = {
   createdAt: string

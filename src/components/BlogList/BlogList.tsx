@@ -29,14 +29,14 @@ type Props = ContainerProps
 
 const Component: React.VFC<Props> = ({ contents, currentPage, pager, selectedCategory }) => (
   <>
-    <ul className="row">
+    <ul className="row p-0">
       {contents.map((content) => (
-        <li key={content.id} className={'mb-18 col-12 col-sm-6 col-md-4 ' + styles.lsn}>
+        <li key={content.id} className={'mb-18 col-12 col-sm-6 align-self-stretch ' + styles.lsn}>
           <Link href={pagesPath._slug(content.id).$url()}>
-            <a className={'d-block card ' + styles.tdn}>
+            <a className={'d-block card h-100 border-0 ' + styles.tdn}>
               {/* <picture> */}
               {/* <source type="image/webp" data-srcset={content.ogimage.url + '?w=670&fm=webp'} /> */}
-              <div className={styles.imgFrame}>
+              <div className={'mb-4 ' + styles.imgFrame}>
                 {/* <img
                   src={content.ogimage.url + '?w=670'}
                   className={'lazyload w-100 h-auto d-block '}
@@ -48,7 +48,7 @@ const Component: React.VFC<Props> = ({ contents, currentPage, pager, selectedCat
                 </picture>
               </div>
               {/* </picture> */}
-              <dl className={'p-3 ' + styles.content}>
+              <dl className={styles.content}>
                 <dt className={styles.title}>{content.title}</dt>
                 <dd>
                   <Meta
@@ -64,7 +64,7 @@ const Component: React.VFC<Props> = ({ contents, currentPage, pager, selectedCat
       ))}
     </ul>
     {pager && (
-      <ul className={styles.pager}>
+      <ul className={'mb-10 ' + styles.pager}>
         {pager.map((page) => (
           <li key={page} className={styles.page} data-is-active={currentPage === page + 1}>
             <Link
