@@ -17,9 +17,7 @@ export async function getContents(): Promise<{
   selectedCategory: null
 }>
 
-export async function getContents(
-  currentPage: number
-): Promise<{
+export async function getContents(currentPage: number): Promise<{
   currentPage: number
   contents: Blog[]
   pager: number[]
@@ -46,17 +44,14 @@ export async function getContents(currentPage = 1, categoryId?: string) {
   const filters = categoryId === undefined ? '' : `category[equals]${categoryId}`
   const offset = (currentPage - 1) * limit
 
-  const [
-    { contents, totalCount },
-    banner,
-    { contents: categories },
-    { articles: popularArticles },
-  ] = await Promise.all([
-    apiClient.blog.$get({ headers, query: { limit, filters, offset } }),
-    apiClient.banner.$get({ headers }),
-    apiClient.categories.$get({ headers, query: { limit: 100 } }),
-    apiClient.popular_articles.$get({ headers }),
-  ])
+  const [{ contents, totalCount }, banner, { contents: categories }, { articles: popularArticles }] = await Promise.all(
+    [
+      apiClient.blog.$get({ headers, query: { limit, filters, offset } }),
+      apiClient.banner.$get({ headers }),
+      apiClient.categories.$get({ headers, query: { limit: 100 } }),
+      apiClient.popular_articles.$get({ headers }),
+    ]
+  )
 
   const pager = [...Array(Math.ceil(totalCount / limit)).keys()]
 

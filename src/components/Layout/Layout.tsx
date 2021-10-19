@@ -14,7 +14,7 @@ import { Latest } from '../Latest'
 import { PopularArticles } from '../PopularArticles'
 import { Search } from '../Search'
 
-import styles from './Layout.module.css'
+// import styles from './Layout.module.css'
 
 type ContainerProps = {
   banner: ApiBanner

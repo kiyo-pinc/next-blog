@@ -11,17 +11,17 @@ import styles from './BlogList.module.scss'
 
 type ContainerProps =
   | {
-    contents: Blog[]
-    currentPage: number
-    pager: number[]
-    selectedCategory?: Category | null
-  }
+      contents: Blog[]
+      currentPage: number
+      pager: number[]
+      selectedCategory?: Category | null
+    }
   | {
-    contents: Blog[]
-    currentPage?: number | null
-    pager?: number[] | null
-    selectedCategory?: Category | null
-  }
+      contents: Blog[]
+      currentPage?: number | null
+      pager?: number[] | null
+      selectedCategory?: Category | null
+    }
 
 export type { ContainerProps as BlogListProps }
 
@@ -71,9 +71,9 @@ const Component: React.VFC<Props> = ({ contents, currentPage, pager, selectedCat
               href={
                 selectedCategory !== null && selectedCategory !== undefined
                   ? pagesPath.category
-                    ._categoryId(selectedCategory.id)
-                    .page._pageNumber(page + 1)
-                    .$url()
+                      ._categoryId(selectedCategory.id)
+                      .page._pageNumber(page + 1)
+                      .$url()
                   : pagesPath.page._pageNumber(page + 1).$url()
               }
             >

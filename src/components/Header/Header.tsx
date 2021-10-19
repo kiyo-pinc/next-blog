@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import React, { useEffect, useState } from 'react'
 
 import { headerId } from '~/src/utils/ids'
 
@@ -41,7 +41,7 @@ const Component: React.VFC<Props> = ({ params, isOpen, toggleOpen, setIsOpen }) 
           <div className="col-10 col-md-6">
             <h1 className={styles.logo}>
               <Link href="/">
-                <a className="text-red">
+                <a className={`text-red ${params}`}>
                   キヨスケの備忘録
                   {/* <img className={styles.logoImg} src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/logo.svg`} alt="microCMS" /> */}
                 </a>

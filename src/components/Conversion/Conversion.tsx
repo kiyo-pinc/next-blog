@@ -14,8 +14,8 @@ const list = [
 ]
 
 const Component: React.VFC<Props> = ({ id }) => (
-  <div>
-    {/* <h2 className={styles.pageTitle}>microCMSとは</h2>
+  <div className="d-none">
+    <h2 className={styles.pageTitle}>microCMSとは</h2>
     <ol className={styles.lists}>
       {list.map((item) => (
         <li key={item} className={styles.list}>
@@ -37,7 +37,7 @@ const Component: React.VFC<Props> = ({ id }) => (
       <a target="site" href={`https://microcms.io/?utm_source=CTA&utm_medium=content-text&utm_campaign=blog-${id}-02`}>
         <button className={styles.button}>microCMSを無料で始める</button>
       </a>
-    </div> */}
+    </div>
   </div>
 )
 
