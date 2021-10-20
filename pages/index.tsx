@@ -23,6 +23,7 @@ const IndexPage: NextPage<Props> = (props) => {
       <Head>
         <title>{title}</title>
         <meta key={OG_TITLE} property={OG_TITLE} content={title} />
+        <meta name="google-site-verification" content="ALF7cHoz_k9lvqjwNn-ma9NuBvMHlTS4vZv5saaDLS4" />
       </Head>
       <BlogListLayout {...props} />
     </>
