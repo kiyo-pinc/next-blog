@@ -11,7 +11,7 @@ type ContainerProps = {
 type Props = ContainerProps
 
 const Component: React.VFC<Props> = ({ body }) => (
-  <div className={styles.post} dangerouslySetInnerHTML={{ __html: body }}></div>
+  <div className={styles.post} dangerouslySetInnerHTML={{ __html: `${body}` }}></div>
 )
 
 const Container: React.VFC<ContainerProps> = (props) => {
