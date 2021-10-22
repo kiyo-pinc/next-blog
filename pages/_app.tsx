@@ -34,13 +34,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         </>
       )}
       <Script
-        strategy="beforeInteractive"
-        src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
-        integrity="sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ=="
+        // strategy="beforeInteractive"
+        src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.0/lazysizes.min.js"
+        integrity="sha512-JrL1wXR0TeToerkl6TPDUa9132S3PB1UeNpZRHmCe6TxS43PFJUcEYUhjJb/i63rSd+uRvpzlcGOtvC/rDQcDg=="
         crossOrigin="anonymous"
       />
     </>
   )
 }
-
 export default MyApp

@@ -23,7 +23,7 @@ const Component: React.VFC<Props> = ({ blogs }) => (
             <a>
               <picture>
                 <source type="image/webp" data-srcset={`${blog.ogimage.url}?w=820&fm=webp`} />
-                <img data-src={`${blog.ogimage.url}?w=820`} className={'lazyload ' + styles.img} alt="" />
+                <img src={`${blog.ogimage.url}?w=820`} className={'lazyload ' + styles.img} alt="" />
               </picture>
               <dl className={styles.content}>
                 <dt className={styles.title}>{blog.title}</dt>
