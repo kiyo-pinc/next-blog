@@ -18,7 +18,7 @@ const Component: React.VFC<Props> = ({ banner, id }) => (
   <div className={styles.wrapper}>
     <Link href={banner.url}>
       <a className={`${id} ` + styles.link}>
-        <Image src={banner.image.url} width={banner.image.width} height={banner.image.height} />
+        <Image src={banner.image.url} width={banner.image.width} height={banner.image.height} alt="" />
       </a>
     </Link>
   </div>
