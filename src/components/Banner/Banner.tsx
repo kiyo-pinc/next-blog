@@ -5,7 +5,7 @@ import React from 'react'
 import { MicroCMSCommonValue } from '~/src/types/microCMS/Common'
 import { Banner } from '~/src/types/microCMS/api/Banner'
 
-import styles from './Banner.module.css'
+import styles from './Banner.module.scss'
 
 type ContainerProps = {
   banner: Omit<Banner, keyof MicroCMSCommonValue>
