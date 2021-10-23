@@ -23,7 +23,7 @@ class MyDocument extends Document {
             sizes="16x16"
             href={`${process.env.NEXT_PUBLIC_BASE_PATH}/favicon-16x16.png`}
           />
-          <link rel="manifest" href="/site.webmanifest" />
+          <link rel="manifest" href={`${process.env.NEXT_PUBLIC_BASE_PATH}/site.webmanifest`} />
         </Head>
         <body>
           <Main />
