@@ -4,7 +4,7 @@ import React from 'react'
 import { pagesPath } from '~/lib/$path'
 import { Category } from '~/src/types/microCMS/api/Category'
 
-import styles from './Breadcrumb.module.css'
+import styles from './Breadcrumb.module.scss'
 
 type ContainerProps = {
   category?: Category

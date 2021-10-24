@@ -1,0 +1,26 @@
+.pageTitle {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #eee;
+  padding: 6px 10px;
+  margin-bottom: 0;
+  border-radius: 5px 5px 0 0;
+}
+
+.lists {
+  padding: 0;
+  .list {
+    list-style: none;
+    background-color: rgb(248, 248, 248);
+    &:nth-child(even) {
+      background-color: #eee;
+    }
+    a {
+      display: block;
+      padding: 10px 10px;
+      text-decoration: none;
+      color: rgb(52, 52, 52);
+      font-size: 14px;
+    }
+  }
+}

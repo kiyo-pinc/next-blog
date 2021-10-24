@@ -2,23 +2,21 @@
   display: flex;
   flex-wrap: wrap;
   padding-top: 20px;
+  padding: 0;
 }
 
 .breadcrumbList {
   color: #616269;
+  list-style: none;
 
   a {
-    color: #331cbf;
+    color: #211858;
+    font-size: 14px;
+    text-decoration: none;
   }
 
   &:not(:last-child)::after {
-    content: '>';
+    content: ">";
     margin: 0 10px;
-  }
-}
-
-@media (max-width: 600px) {
-  .breadcrumbList {
-    font-size: 14px;
   }
 }

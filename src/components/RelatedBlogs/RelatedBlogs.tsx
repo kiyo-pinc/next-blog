@@ -5,7 +5,7 @@ import { pagesPath } from '~/lib/$path'
 import { Meta } from '~/src/components/Meta'
 import { Blog } from '~/src/types/microCMS/api/Blog'
 
-import styles from './RelatedBlogs.module.css'
+import styles from './RelatedBlogs.module.scss'
 
 type ContainerProps = {
   blogs: Blog[]
@@ -21,7 +21,7 @@ const Component: React.VFC<Props> = ({ blogs }) => (
         <li key={blog.id} className={styles.list}>
           <Link href={pagesPath._slug(blog.id).$url()}>
             <a>
-              <picture>
+              <picture className="mb-2">
                 <source type="image/webp" data-srcset={`${blog.ogimage.url}?w=820&fm=webp`} />
                 <img src={`${blog.ogimage.url}?w=820`} className={'lazyload ' + styles.img} alt="" />
               </picture>
